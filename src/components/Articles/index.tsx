@@ -1,5 +1,6 @@
 import { ArrowRightIcon, Calendar1Icon, ClockIcon } from "lucide-react";
 import Image from "next/image";
+import { Button } from "../Button";
 
 export function Articles() {
   const articles = [
@@ -116,10 +117,10 @@ export function Articles() {
             </article>
           ))}
         </div>
-        <div className="text-center mt-12">
-          <button className="px-8 py-3 border-2 border-[#c9a961] text-[#c9a961] font-semibold rounded-lg hover:bg-[#c9a961] hover:text-white transition-all duration-300">
+        <div className=" flex justify-center mt-12">
+          <Button variant="clean" size="md">
             Ver Todos os Artigos
-          </button>
+          </Button>
         </div>
       </div>
     </section>

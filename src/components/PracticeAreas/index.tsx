@@ -47,7 +47,7 @@ export function PracticeAreas() {
     },
   ];
   return (
-    <section className="bg-white pt-8 pb-8 scroll-mt-20" id="areas">
+    <section className="bg-white pt-8 pb-8" id="areas">
       <div className="container mx-auto px-4 sm:px lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">

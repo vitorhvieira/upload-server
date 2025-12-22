@@ -25,13 +25,7 @@ export function Header() {
   const handleScroll = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.scrollY;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 

@@ -3,6 +3,7 @@ import { CircleChevronLeftIcon, CircleChevronRightIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { Button } from "../Button";
 
 export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState<number>(0);
@@ -43,10 +44,7 @@ export default function Hero() {
   }, [slides.length]);
 
   return (
-    <section
-      className="relative h-screen w-full overflow-hidden mt-20 scroll-mt-20"
-      id="inicio"
-    >
+    <section className="relative h-screen w-full overflow-hidden" id="inicio">
       {slides.map((slide, index) => (
         <div
           key={index}
@@ -69,10 +67,8 @@ export default function Hero() {
               <p className="text-lg sm:text-xl md:text-2xl text-gray-200">
                 {slide.subtitle}
               </p>
-              <Link href={"/contatos"}>
-                <button className="mt-8 px-8 py-2 bg-yellow-700 text-white font-semibold rounded-lg hover:bg-yellow-800 transition-all duration-300 transform hover:scale-105">
-                  Entre em contato
-                </button>
+              <Link href={"/contatos"} className="flex justify-center">
+                <Button>Entre em contato</Button>
               </Link>
             </div>
           </div>
